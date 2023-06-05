@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advogado</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(imagem/ADV\ NILTON.jpg);
+            background-size: cover; 
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 1;
+        }
+
+        .maior {
+            background: #301d15fb;
+            color: #f9f9f9;
+        }
+
+        .do-meio {
+            background: #3897d6;
+            padding: 5px;
+            color: #e6e6e6;
+            opacity: 0.3;
+        }
+
+        img {
+            width: 100%;
+
+        }
+
+        h1 {
+            columns: #fff;
+            text-align: center;
+            margin: 20px;
+        }
+
+        input {
+            display: block;
+            background: #f9f9f9;
+            border: 1px solid #e6e6e6;
+            height: 30px;
+            width: 352px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        textarea {
+            display: block;
+            background: #f9f9f9;
+            border: 1px solid #e6e6e6;
+            height: 100px;
+            width: 352px;
+            margin-bottom: 20px;
+            padding: 10px;
+            transition: opacity 2s;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        button {
+            background: rgb(43, 122, 103);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: bold;
+            width: 174px;
+            cursor: pointer;
+            color: #f1f2f5;
+        }
+
+        button:hover {
+            opacity: 0.7;
+            background: #3f77c2;
+            color: #fff;
+
+        }
+
+        .voltar {
+            background: gray;
+            
+        }
+
+        .lis {
+            list-style: none;
+            margin-top: 10px;
+            padding: 5px;
+            
+        }
+
+        .lei {
+            text-decoration: none;
+            color: rgb(26, 214, 151);
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        #resumo-de-lei {
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 15px;
+            
+        }
+
+        .entrar-em-contato {
+            position: fixed;
+            top: 15%;
+            left: 31%;
+        }
+
+        div {
+
+            transition: opacity 2s;
+        }
+        .advogado {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        .inpute {
+            font-size: 20px;
+
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="maior">
+        <img src="imagem/advocacia.jpg" alt="logo da imagem">
+        <div class="do-meio">
+            <h1>Dr. Nilton Arêas</h1>
+        </div>
+        <div class="advogado">Advogado</div>
+
+        <ol id="resumo-de-lei"><i>Resumo de cada lei</i>:</ol>
+        <li class="lis"><abbr class="lei"
+                title="é qualquer vínculo jurídico de uma pessoa natural que presta uma obra ou serviço mediante contraprestação">Trabalhista</abbr>
+        </li>
+        <li class="lis"><abbr class="lei"
+                title="é qualquer vínculo jurídico de uma pessoa natural que presta uma obra ou serviço mediante contraprestação">Tributária</abbr>
+        </li>
+        <li class="lis"><abbr class="lei"
+                title="é a conhecida Lei Pelé, Lei nº 9.615/1998, que atribuiu aos clubes a obrigatoriedade de se constituírem em clubes-empresas, enquadrou o torcedor como consumidor">Desportiva</abbr>
+        </li>
+        <li class="lis"><abbr class="lei"
+                title=" atua nos direitos e obrigações dos empresários, contratos especiais, títulos de crédito e propriedade industrial.">Empresarial</abbr>
+        </li>
+        <li class="lis"><abbr class="lei" title="E é o conjunto
+            de condições, leis, influências e interações de ordem física, química e biológica,
+            que permite, abriga e rege a vida em todas as suas formas." id="ambiental">Ambiental</abbr></li>
+        <li class="lis"><abbr class="lei"
+                title="É uma prática que tem como objetivo garantir que uma empresa ou organização esteja em conformidade com as leis e regulamentos aplicáveis em sua área de atuação">Compliance
+                jurídico</abbr></li>
+        <li class="lis"><abbr class="lei"
+                title="É um ramo do Direito Público que é responsável por interpretar, analisar e garantir que a Constituição do país seja cumprida">Direito
+                do Estado</abbr></li>
+        <li class="lis"><abbr class="lei"
+                title="É o ramo do Direito Civil que protege a criação humana exteriorizada das mais diversas formas, tais como: invenções em todos os campos da atividade humana">Direito
+                da Propriedade Intelectual</abbr></li>
+        <button onclick="abrir()" class="entrar-em-contato">Entrar em Contato</button>
+    </div>
+
+    <form action="https://formspree.io/f/mlekvqkz" method="post">
+        <input class="inpute" type="text" name="name" required placeholder="Nome Completo">
+        <input class="inpute" placeholder="E-mail" type="email" name="email" id="cemail">
+        <input class="inpute" type="tel" name="Telefone" id="ctel" placeholder="Seu Telefone">
+        <textarea class="inpute" placeholder="Digite: Como posso ajudar?"></textarea>
+        <button type="submit">ENVIAR</button>
+        <button onclick="fechar()" type="button" class="voltar">Voltar</button>
+    </form>
+</body>
+
+<script>
+    function abrir() {
+        document.querySelector("form").style.opacity = 1
+        document.querySelector("div").style.opacity = 0
+    }
+
+    function fechar() {
+        document.querySelector("form").style.opacity = 0
+        document.querySelector("div").style.opacity = 1
+    }
+</script>
+
+</html>
